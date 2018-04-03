@@ -26,3 +26,5 @@ apply plugin: "com.github.rmannibucau.gradle.plugin.list-artifacts"
 // optional
 project.property['listArtifactsOutput'] = "/tmp/dump.json"
 ----
+
+NOTE: if you dont set an output path you have to use `--info` on you gradle command line
