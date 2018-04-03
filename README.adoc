@@ -1,0 +1,28 @@
+= Gradle List Artifacts
+
+== Installation
+
+[source,groovy]
+----
+buildscript {
+  repositories {
+    mavenLocal()
+    mavenCentral()
+  }
+  dependencies {
+    // todo: use a configuration for that
+    classpath "com.github.rmannibucau:gradle-list-artifacts:1.0-SNAPSHOT"
+    classpath "org.apache.johnzon:johnzon-jsonb:1.1.7"
+    classpath "org.apache.johnzon:johnzon-mapper:1.1.7"
+    classpath "org.apache.johnzon:johnzon-core:1.1.7"
+    classpath "org.apache.geronimo.specs:geronimo-json_1.1_spec:1.0"
+    classpath "org.apache.geronimo.specs:geronimo-jsonb_1.0_spec:1.0"
+  }
+}
+
+apply plugin: "com.github.rmannibucau.gradle.plugin.list-artifacts"
+
+
+// optional
+project.property['listArtifactsOutput'] = "/tmp/dump.json"
+----
